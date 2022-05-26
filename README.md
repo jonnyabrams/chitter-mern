@@ -1,3 +1,7 @@
+# Chitter (MERN stack)
+
+This is a Twitter clone using MongoDB, Express.js, Node.js and React.js.
+
 npm run server
 
 ## Technologies Used
