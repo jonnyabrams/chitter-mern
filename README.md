@@ -3,6 +3,8 @@
 This is a Twitter clone using MongoDB, Express.js, Node.js and React.js.
 
 npm run server
+npm run client
+npm run dev (concurrently)
 
 ## Technologies Used
 
