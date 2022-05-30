@@ -6,7 +6,7 @@ import { logout, reset } from '../features/auth/authSlice'
 const Header = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  const {user} = useSelector((state) => state.auth)
+  const { user } = useSelector((state) => state.auth)
 
   const onLogout = () => {
     dispatch(logout())
@@ -20,23 +20,26 @@ const Header = () => {
         <Link to='/'>Chitter</Link>
       </div>
       <ul>
-        {user ? (<li>
-        <button className='btn' onClick={onLogout}>
-          <FaSignOutAlt /> Logout
-        </button>
-        </li>) : (<>
-        <li>
-        <Link to='/login'>
-          <FaSignInAlt /> Login
-        </Link>
-        </li>
-        <li>
-          <Link to='/register'>
-            <FaUser /> Register
-          </Link>
-        </li>
-        </>)}
-        
+        {user ? (
+          <li>
+            <button className='btn' onClick={onLogout}>
+              <FaSignOutAlt /> Logout
+            </button>
+          </li>
+        ) : (
+          <>
+            <li>
+              <Link to='/login'>
+                <FaSignInAlt /> Login
+              </Link>
+            </li>
+            <li>
+              <Link to='/register'>
+                <FaUser /> Register
+              </Link>
+            </li>
+          </>
+        )}
       </ul>
     </header>
   )

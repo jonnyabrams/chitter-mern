@@ -1,17 +1,20 @@
 const mongoose = require('mongoose')
 
-const peepSchema = mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: 'User'
+const peepSchema = mongoose.Schema(
+  {
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: 'User',
+    },
+    text: {
+      type: String,
+      required: [true, 'Please add a text value'],
+    },
   },
-  text: {
-    type: String,
-    required: [true, 'Text field missing']
+  {
+    timestamps: true,
   }
-}, {
-  timestamps: true
-})
+)
 
 module.exports = mongoose.model('Peep', peepSchema)

@@ -6,7 +6,7 @@ import Profile from './pages/Profile'
 import Login from './pages/Login'
 import Register from './pages/Register'
 
-function App() {
+const App = () => {
   return (
     <>
       <Router>
@@ -21,7 +21,7 @@ function App() {
       </Router>
       <ToastContainer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
